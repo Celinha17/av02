@@ -2,12 +2,14 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { PolicialService, Policial } from '../../services/policial.service';
+import { HttpClientModule } from '@angular/common/http';
+
 
 
 @Component({
 
   selector: 'app-cadastro-policiais',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, HttpClientModule, FormsModule],
   templateUrl: './cadastro-policiais.component.html',
   styleUrls: ['./cadastro-policiais.component.css']
   

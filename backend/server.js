@@ -3,13 +3,13 @@ const policialRoutes = require('./routes/policialRoutes');
 const cors= require('cors');
 require('dotenv').config();
 
+
 const app= express();
 
 app.use(express.json());
-
 app.use(cors({
-  origin: 'http://localhost:4200', // ou use origin: '*' para liberar para todos
-  credentials: true // se precisar de cookies/autenticação
+  origin: '*', // libera para todas as origens
+  credentials: true 
 }));
 
 app.use('/api', policialRoutes);

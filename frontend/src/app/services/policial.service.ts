@@ -23,11 +23,12 @@ export class PolicialService
 
   constructor(private http: HttpClient) { }
 
-  cadastrar(policial: Policial)
-    {return this.http.post(this.apiUrl, policial);}
+  cadastrar(policial: Policial): Observable<Policial> {
+    return this.http.post<Policial>(this.apiUrl, policial);
+  }
 
-  listar(): Observable<Policial[]> 
-    {return this.http.get<Policial[]>(this.apiUrl);}
-
+  listar(): Observable<Policial[]> {
+    return this.http.get<Policial[]>(this.apiUrl);
+  }
 
 }
